@@ -1,0 +1,125 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{minted}
+\usepackage{titlesec}
+\usepackage{circuitikz}
+\usepackage[a4paper,margin=1in,footskip=0.25in]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%basic page layout
+
+%draw finite state machine
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata}
+\newcommand{\Lcvy}{\mathcal{L}}
+%header and footer settings
+\lhead{Gen IMS II Lecture Note}
+\chead{Yiping Deng}
+\rhead{\today}
+
+\titlelabel{\thetitle\enspace}
+
+\begin{document}
+\title{Gen IMS II Lecture Note}
+\author{Yiping Deng}
+\maketitle
+\thispagestyle{fancy}
+\section{ODEs}
+\subsection{Spring-Peudulem}
+Given the ODE:
+$$ M x'' + Kx = 0 $$
+We have a ansaz:
+$$ x(t) = A cos(\omega t) + B sin(\omega t) $$
+Plugin:
+$$ M(-A \omega^2 cos(\omega t) - B \omega^2 sin(\omega t)) +
+K(A cos(\omega t) + B sin(\omega t)) = 0 $$
+Solving and grouping:
+\begin{align*}
+    - M A \omega^2 + k A &= 0 \\
+    - M B \omega^2 + k B &= 0 \\
+    \omega^2 &= \frac{K}{M}
+\end{align*}
+Other way to solve for ODE by using \textbf{Laplace transform}
+\begin{align*}
+    \Lcvy(x'') &= s^2 X(s) -sx_0 - x_0' \\
+    \Lcvy(x') &= s X(s) - x_0
+\end{align*}
+Using the above formula, we have
+\begin{align*}
+    M s^2 X(s) - M s x_0 - M x_0' + KX(s) &= 0 \\
+    X(s) &= \frac{sx_0 + x_0'}{s^2 + K / M}
+\end{align*}
+However, we need to consider the Laplace transform of Trignometric function:
+$ \Lcvy(cos(\omega t)) = ? $ and $ \Lcvy(sin(\omega t)) = ? $ \\
+Using some trick:
+\begin{align*}
+    \Lcvy(cos''(\omega t)) &= s^2 \Lcvy(cos(\omega t)) - s \\
+    \Lcvy(cos''(\omega t)) &= - \omega^2 \Lcvy(cos(\omega t))
+\end{align*}
+Solve for Laplace term
+\begin{align*}
+    \Lcvy(cos(\omega t)) &= \frac{s}{s^2 + \omega^2} \\
+    \Lcvy(sin(\omega t)) &= \frac{\omega}{s^2 + \omega^2}
+\end{align*}
+Using the Laplace transform, we can solve the ODE easily.
+\begin{align*}
+    x(t) &= x_0 cos(\omega t) + \frac{x_0'}{\omega} sin(\omega t)
+\end{align*}
+\subsection{Complex Number}
+We write a complex number as $ z = a + i b $ \\
+Linear rule: $ z_1 + z_2 = (a_1 + a_2) + (b_1 + b_2)i $ \\
+Product rule: $ z_1 \cdot z_2 = (a_1 a_2 - b_1 b_2) + (a_1 b_2 + a_2 b_1)i $ \\
+Euler's representation: $ e^x = cos(x) + i sin(x) $ \\
+Using Power Series, we can express the following
+\begin{align*}
+    e^x &= \sum_{n = 0}^{ \infty} \frac{x^n}{n!} \\
+    cos(x) &= 1 - \frac{1}{2} x^2 + \frac{1}{24} x^4 + ... \\
+    sin(x) &= x - \frac{1}{6} x^3 + ...
+\end{align*}
+Euler's formula: $ z = r e^{i \theta} $
+\section{Transfer Function}
+Having a system equation:
+$$ a_2 \ddot x + a_1 \dot x + a_0 x = b_2 \ddot r + b_1 \dot r + b_0 $$
+Solving using Laplace:
+$$ (a_2 s^2 + a_1 s + a_0) X(s) = (s_2 s^2 + b_1 s + b_0) R(s) + \text{ initial value term} $$
+We ignore the "initial value term", we have
+$$ X(s) = \frac{b_2 s^2 + b_1 s + b_0}{a_2 s^2 + a_1 s + a_0} \cdot R(s) = T(s) \cdot R(s) $$
+If you have two transfer function, thus we have
+$$ Y = T_2(s) \cdot X = T_2(s) \cdot T_1(s) \cdot R(s) $$
+\subsection{Model in Frequency domain}
+Using a model with one resistor and one capacitor. \\
+Mode current: $$ V_S(s) $$
+Voltage: $$ V_S(s) = R \cdot I(s) $$
+$$ V_C(s) = \frac{1}{C s} \cdot I(s) $$
+Remember:
+\begin{align*}
+    I_C(t) &= \dot Q = C \cdot \dot V_C \\
+    I_C(s) &= C \cdot s \cdot V_C(s) \\
+    -V_S &+ V_R + V_C = 0 \\
+    V_S(s) &= (R + \frac{1}{CS}) I(s)
+\end{align*}
+With two of such system, we have
+\begin{align*}
+    (R + \frac{1}{C s}) I_1(s) - \frac{1}{C s} I_2(s) = Vs \\
+    - \frac{1}{C s} I_1(s) + (R + \frac{2}{C s} I_2(s)) = 0
+\end{align*}
+Write all the term in matrices and vectors
+\begin{align*}
+    M \cdot \vec{I} &= \vec{V} \implies \\
+    \vec{I} &= M^-1 \cdot \vec{V}
+\end{align*}
+\subsection{Op-Amps}
+Use such device to amptify the voltage.
+Using a feedback, we have the relationship like:
+\begin{align*}
+    V_{in} &= \frac{V_{in} - V_{-}}{R_1} = \frac{ V_{-} - V_{out}}{R_{f}} \\
+    V_{out} &= (1 + \frac{R_{f}}{R_1})V_{-} - \frac{R_f}{R_1} V_{in} \\
+    V_{-} = V_{+} + \epsilon
+\end{align*}
+if we have feedback, using virtual ground, the effective gain is.
+$$ V_{out} = - \frac{R_f}{R_1} V_{in} $$
+
+\end{document}

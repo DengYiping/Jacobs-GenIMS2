@@ -1,0 +1,43 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Points} \PYG{k}{for} \PYG{l+m+mi}{5} \PYG{n}{iteration}\PYG{p}{:}
+\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mf}{0.003}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{4e\PYGZhy{}07}\PYG{p}{,} \PYG{l+m+mf}{0.0058}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{8e\PYGZhy{}07}\PYG{p}{,} \PYG{l+m+mf}{0.00748}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{1.2e\PYGZhy{}06}\PYG{p}{,} \PYG{l+m+mf}{0.008487999999999999}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{1.6e\PYGZhy{}06}\PYG{p}{,} \PYG{l+m+mf}{0.0090928}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{2e\PYGZhy{}06}\PYG{p}{,} \PYG{l+m+mf}{0.00945568}\PYG{p}{)}
+\PYG{n}{Points} \PYG{k}{for} \PYG{l+m+mi}{10}\PYG{p}{:}
+\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mf}{0.003}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{2e\PYGZhy{}07}\PYG{p}{,} \PYG{l+m+mf}{0.0044}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{4e\PYGZhy{}07}\PYG{p}{,} \PYG{l+m+mf}{0.00552}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{6e\PYGZhy{}07}\PYG{p}{,} \PYG{l+m+mf}{0.006416}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{8e\PYGZhy{}07}\PYG{p}{,} \PYG{l+m+mf}{0.0071328}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{1e\PYGZhy{}06}\PYG{p}{,} \PYG{l+m+mf}{0.00770624}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{1.2e\PYGZhy{}06}\PYG{p}{,} \PYG{l+m+mf}{0.008164992}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{1.4e\PYGZhy{}06}\PYG{p}{,} \PYG{l+m+mf}{0.0085319936}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{1.6e\PYGZhy{}06}\PYG{p}{,} \PYG{l+m+mf}{0.008825594879999999}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{1.8e\PYGZhy{}06}\PYG{p}{,} \PYG{l+m+mf}{0.009060475904}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{2e\PYGZhy{}06}\PYG{p}{,} \PYG{l+m+mf}{0.0092483807232}\PYG{p}{)}
+\PYG{n}{Points} \PYG{k}{for} \PYG{l+m+mi}{20}\PYG{p}{:}
+\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mf}{0.003}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{1e\PYGZhy{}07}\PYG{p}{,} \PYG{l+m+mf}{0.0037}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{2e\PYGZhy{}07}\PYG{p}{,} \PYG{l+m+mf}{0.0043300000000000005}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{3e\PYGZhy{}07}\PYG{p}{,} \PYG{l+m+mf}{0.004897}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{4e\PYGZhy{}07}\PYG{p}{,} \PYG{l+m+mf}{0.0054073}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{5e\PYGZhy{}07}\PYG{p}{,} \PYG{l+m+mf}{0.005866570000000001}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{6e\PYGZhy{}07}\PYG{p}{,} \PYG{l+m+mf}{0.006279913000000001}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{7e\PYGZhy{}07}\PYG{p}{,} \PYG{l+m+mf}{0.0066519217000000005}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{8e\PYGZhy{}07}\PYG{p}{,} \PYG{l+m+mf}{0.00698672953}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{9e\PYGZhy{}07}\PYG{p}{,} \PYG{l+m+mf}{0.007288056577}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{1e\PYGZhy{}06}\PYG{p}{,} \PYG{l+m+mf}{0.0075592509193}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{1.1e\PYGZhy{}06}\PYG{p}{,} \PYG{l+m+mf}{0.00780332582737}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{1.2e\PYGZhy{}06}\PYG{p}{,} \PYG{l+m+mf}{0.008022993244633}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{1.2999999999999998e\PYGZhy{}06}\PYG{p}{,} \PYG{l+m+mf}{0.0082206939201697}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{1.3999999999999997e\PYGZhy{}06}\PYG{p}{,} \PYG{l+m+mf}{0.00839862452815273}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{1.4999999999999996e\PYGZhy{}06}\PYG{p}{,} \PYG{l+m+mf}{0.008558762075337458}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{1.5999999999999995e\PYGZhy{}06}\PYG{p}{,} \PYG{l+m+mf}{0.008702885867803711}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{1.6999999999999994e\PYGZhy{}06}\PYG{p}{,} \PYG{l+m+mf}{0.00883259728102334}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{1.7999999999999993e\PYGZhy{}06}\PYG{p}{,} \PYG{l+m+mf}{0.008949337552921006}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{1.8999999999999992e\PYGZhy{}06}\PYG{p}{,} \PYG{l+m+mf}{0.009054403797628905}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+m+mf}{1.999999999999999e\PYGZhy{}06}\PYG{p}{,} \PYG{l+m+mf}{0.009148963417866014}\PYG{p}{)}
+\end{Verbatim}
